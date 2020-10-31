@@ -84,8 +84,8 @@ while True:
         print("You have chosen", country + ", nice choice! Lets see the data.")
         country_df = df[df.countriesAndTerritories == country]
 
-        print("This is the head of the data for Zimbabwe")
-        print(country_df)
+        print("This is the head of the data for " + country)
+        print(country_df.head())
 
         country_df.loc[:,"dateRep"] = pd.to_datetime(country_df['dateRep'], format="%d/%m/%Y").dt.strftime("%Y-%m-%d")
 
